@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends React.Component {
   state = {
@@ -15,11 +16,18 @@ class AlbumList extends React.Component {
       })
   }
 
+  renderAlbums(){
+    return this.state.albums.map((album) => {
+      console.log(album, 'album');
+      return <AlbumDetail key={album.title} details={album} />
+    })
+  }
+
   render(){
-    console.log(this.state, 'state');
+
     return (
       <View>
-        <Text>Album List</Text>
+        {this.renderAlbums()}
       </View>
     )
   }
