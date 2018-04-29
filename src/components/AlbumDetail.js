@@ -10,14 +10,24 @@ const AlbumDetail = (props) => {
 
     <Card>
       <CardItem>
-        <View>
-          <Image source={{uri: thumbnail_image}} style={styles.thumbnailStyle} />
+        <View style={styles.thumbnailContainerStyle}>
+          <Image
+            source={{uri: thumbnail_image}}
+            style={styles.thumbnailStyle}
+          />
         </View>
 
         <View style={styles.headerContentStyle}>
-          <Text>{title}</Text>
+          <Text style={styles.headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
         </View>
+      </CardItem>
+
+      <CardItem>
+        <Image
+          source={{uri: image}}
+          style={styles.imageStyle}  
+        />
       </CardItem>
     </Card>
   )
@@ -29,9 +39,23 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-around'
   },
+  headerTextStyle: {
+    fontSize: 18
+  },
   thumbnailStyle: {
     height: 50,
     width: 50
+  },
+  thumbnailContainerStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10,
+    marginLeft: 10
+  },
+  imageStyle: {
+    height: 300,
+    flex: 1,
+    width: null
   }
 }
 
