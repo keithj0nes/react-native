@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import Card from './Card';
 import CardItem from './CardItem';
+import Button from './Button';
 // class AlbumDetail extends react
 
 const AlbumDetail = (props) => {
@@ -26,8 +27,12 @@ const AlbumDetail = (props) => {
       <CardItem>
         <Image
           source={{uri: image}}
-          style={styles.imageStyle}  
+          style={styles.imageStyle}
         />
+      </CardItem>
+
+      <CardItem>
+        <Button />
       </CardItem>
     </Card>
   )

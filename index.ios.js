@@ -8,7 +8,7 @@ export default class project2 extends Component {
   render() {
 
     return (
-      <View>
+      <View style={{flex: 1}}>
         <Header title={'Albums'}/>
         <AlbumList />
 
